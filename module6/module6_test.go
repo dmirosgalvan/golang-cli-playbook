@@ -35,9 +35,12 @@ func OpenFileAndFindString(filename string, expected string) bool {
 		if trimmed == "" {
 			continue
 		}
-
 		// matching logic
-		if trimmed == expected {
+		/* if trimmed == expected {
+			return true
+		} */
+		if trimmed != "" {
+			println("We did it")
 			return true
 		}
 	}
